@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:weightSum="10"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".Attendance">
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_weight="9"
+      android:scrollbars="vertical"
+      android:scrollIndicators="right"
+      android:layout_height="wrap_content">
+    <GridLayout
+      android:id="@+id/gridView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#7A8991"
+      android:orientation="vertical"
+      />
+    </ScrollView>
+    <FrameLayout
+      android:layout_weight="1"
+      android:id="@+id/fr1"
+      android:layout_width="match_parent"
+      android:layout_height="50dp">
+        <Button
+          android:layout_width="match_parent"
+          android:id="@+id/btnSubmit"
+          android:layout_height="match_parent"
+          android:onClick="submit"
+          android:visibility="visible"
+          android:text="SUBMIT" />
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:visibility="gone"
+          android:id="@+id/pb"
+          android:layout_height="match_parent">
+            <ProgressBar
+              android:layout_width="70dp"
+              android:theme="@style/Pb"
+              android:layout_height="match_parent"/>
+            <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:textSize="20dp"
+              android:paddingLeft="20dp"
+              android:text="Uploading Attendance..."
+              />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
